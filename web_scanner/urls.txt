@@ -1,0 +1,4 @@
+https://google.com
+https://fastapi.tiangolo.com
+https://pypi.org/project/requests/
+https://stackoverflow.com/
