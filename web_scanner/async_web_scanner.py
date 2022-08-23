@@ -14,7 +14,7 @@ async def async_get(session, url: str):
 
 async def async_scan(urls: Iterable[str]) -> float:
     async with aiohttp.ClientSession() as session:
-        tasks = [asyncio.create_task(async_get(session, url)) for url in urls]
+        tasks = (async_get(session, url) for url in urls)
         responses = await asyncio.gather(*tasks)
         return sum(map(len, responses))
 
